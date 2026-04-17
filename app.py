@@ -19,7 +19,7 @@ def get_connection():
 # --- MAIN APP CONTROL FLOW ---
 def main():
     # Set wide layout and title for the browser tab
-    st.set_page_config(page_title="Workout and Exercise", layout="wide")
+    st.set_page_config(page_title="Fitness Tracking App", layout="wide")
     
     # Initialize session state for user authentication status
     if 'logged_in' not in st.session_state:
@@ -36,7 +36,7 @@ def main():
     else:
         # Sidebar for navigation and logout
         with st.sidebar:
-            st.title("Workout and Exercise")
+            st.title("Fitness Tracking App")
             st.write(f"Logged in: **{st.session_state.get('user_name')}**")
             st.divider()
             choice = st.radio("Navigation", ["Training Log", "Goals and Progress", "Health Metrics"])
